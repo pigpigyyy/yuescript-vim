@@ -1,6 +1,6 @@
 " Language:    YueScript
 " Maintainer:  Li Jin <dragon-fly@qq.com>
-" Based On:    CoffeeScript by Mick Koch <kchmck@gmail.com>
+" Based On:    MoonScript by leafo <leafot@gmail.com>
 " URL:         http://github.com/pigpigyyy/yuescript-vim
 " License:     WTFPL
 
@@ -184,7 +184,7 @@ hi def link yueSpecialVar Structure
 
 " A class-like name that starts with a capital letter
 syn match yueObject /\<\u\w*\>/ display
-hi def link yueObject Structure
+hi def link yueObject Type
 
 " A constant-like name in SCREAMING_CAPS
 syn match yueConstant /\<\u[A-Z0-9_]\+\>/ display

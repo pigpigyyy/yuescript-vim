@@ -1,6 +1,6 @@
 " Language:    YueScript
 " Maintainer:  Li Jin <dragon-fly@qq.com>
-" Based On:    CoffeeScript by Mick Koch <kchmck@gmail.com>
+" Based On:    MoonScript by leafo <leafot@gmail.com>
 " URL:         http://github.com/pigpigyyy/yuescript-vim
 " License:     WTFPL
 
