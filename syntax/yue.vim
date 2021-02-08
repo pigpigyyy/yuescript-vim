@@ -37,8 +37,6 @@ syn match yueKeyword /\<\%(export\|local\|global\|import\|from\|with\|in\|and\|o
 \                       display
 syn match yueKeyword /\%(import\s*['"][^'"]\+['"]\s*\)\@<=as/
 \                       display
-syn match yueKeyword /\%(macro\s\+\)\@<=\%(expr\|block\|lua\|text\)/
-\                       display
 syn match yueKeyword /\%(export\)\@<=\s\+default/
 \                       display
 syn match yueKeyword /\<\I\i\+\>\%(\s\+\%(\I\i*\|,\|\s\+\)\+\s*=\)\@=/
@@ -171,8 +169,8 @@ hi def link yueSpecialOp SpecialChar
 syn match yueBoolean /\<\%(true\|false\)\>/ display
 hi def link yueBoolean Boolean
 
-syn match yueGlobal /\<\%(nil\)\>/ display
-hi def link yueGlobal Type
+syn match yueNil /\<\%(nil\)\>/ display
+hi def link yueNil Constant
 
 " A special variable
 syn match yueSpecialVar /\<\%(self\)\>/ display
@@ -304,7 +302,7 @@ syn match yueSlashAccess /\\\@<!\\\s*\I\i*/he=s+1 contains=@yueIdentifier
 hi def link yueSlashAccess yueExtendedOp
 
 " Ignore reserved words in macro definition.
-syn match yueMacroDef /\%(macro\s\+\%(expr\|block\|lua\|text\)\s\+\)\@<=\s*\I\i*/he=s contains=@yueIdentifier
+syn match yueMacroDef /\%(macro\s\+\)\@<=\s*\I\i*/he=s contains=@yueIdentifier
 hi def link yueMacroDef yueExtendedOp
 
 " This is required for interpolations to work.
@@ -322,7 +320,7 @@ syn region yueCurlies matchgroup=yueCurly start=/{/ end=/}/
 syn cluster yueAll contains=yueStatement,yueRepeat,yueConditional,
 \                              yueKeyword,yueOperator,yueFunction,
 \                              yueExtendedOp,yueSpecialOp,yueBoolean,
-\                              yueGlobal,yueSpecialVar,yueObject,
+\                              yueNil,yueSpecialVar,yueObject,
 \                              yueConstant,yueString,yueNumber,
 \                              yueFloat,yueReservedError,yueObjAssign,
 \                              yueObjStringAssign,yueObjNumberAssign,
