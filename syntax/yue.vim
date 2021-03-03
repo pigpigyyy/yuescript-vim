@@ -239,12 +239,12 @@ syn region yueAssignString start=/'/ skip=/\\\\\|\\'/ end=/'/ contained
 hi def link yueAssignString String
 
 " A normal object assignment
-syn match yueObjAssign /@\?\I\i*\s*:\@<!::\@!/
+syn match yueObjAssign /@\?\I\i*#\?:\@<!::\@!/
 \                         contains=@yueIdentifier,yueAssignOp
 hi def link yueObjAssign Identifier
 
 " Short hand table literal assign
-syn match yueShortHandAssign /:\@<!:@\?\I\i*\s*/
+syn match yueShortHandAssign /:\@<!:@\?\I\i*#\?\s*/
 \                         contains=@yueIdentifier,yueAssignOp
 hi def link yueShortHandAssign Identifier
 
