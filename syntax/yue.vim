@@ -37,7 +37,7 @@ syn match yueKeyword /\<\%(export\|local\|global\|import\|from\|with\|in\|and\|o
 \                       display
 syn match yueKeyword /\%(import\s*['"][^'"]\+['"]\s*\)\@<=as/
 \                       display
-syn match yueKeyword /\%(export\)\@<=\s\+default/
+syn match yueKeyword /\%(export\)\@<=\s\+default\s/
 \                       display
 syn match yueKeyword /\<\I\i\+\>\%(\s\+\%(\I\i*\|,\|\s\+\)\+\s*=\)\@=/
 \                       display
