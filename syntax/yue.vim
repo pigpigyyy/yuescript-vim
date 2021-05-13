@@ -23,7 +23,7 @@ syn sync minlines=100
 syn match yueStatement /\<\%(return\|break\|continue\)\>/ display
 hi def link yueStatement Statement
 
-syn match yueRepeat /\<\%(for\|while\)\>/ display
+syn match yueRepeat /\<\%(for\|while\|repeat\|until\)\>/ display
 hi def link yueRepeat Repeat
 
 syn match yueConditional /\<\%(if\|else\|elseif\|then\|switch\|when\|unless\)\>/
@@ -39,7 +39,7 @@ syn match yueKeyword /\%(import\s*['"][^'"]\+['"]\s*\)\@<=as/
 \                       display
 syn match yueKeyword /\%(export\)\@<=\s\+default\s/
 \                       display
-syn match yueKeyword /\<\I\i\+\>\%(\s\+\%(\I\i*\|,\|\s\+\)\+\s*=\)\@=/
+syn match yueKeyword /\<\I\i\>\%(\s\+\%(\I\i*\|,\|\s\+\)\+\s*=\)\@=/
 \                       display
 hi def link yueKeyword Keyword
 
@@ -222,7 +222,7 @@ hi def link yueFloat Float
 
 " An error for reserved keywords
 if !exists("yue_no_reserved_words_error")
-  syn match yueReservedError /\<\%(end\|function\|repeat\)\>/
+  syn match yueReservedError /\<\%(end\|function\)\>/
   \                             display
   hi def link yueReservedError Error
 endif
