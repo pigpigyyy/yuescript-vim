@@ -33,7 +33,7 @@ hi def link yueConditional Conditional
 " syn match yueException /\<\%(try\|catch\|finally\)\>/ display
 " hi def link yueException Exception
 
-syn match yueKeyword /\<\%(export\|local\|global\|import\|from\|with\|in\|and\|or\|not\|class\|extends\|super\|using\|do\|macro\)\>/
+syn match yueKeyword /\<\%(export\|local\|global\|import\|from\|with\|in\|and\|or\|not\|class\|extends\|super\|using\|do\|macro\|try\|catch\)\>/
 \                       display
 syn match yueKeyword /\%(import\s*['"][^'"]\+['"]\s*\)\@<=as/
 \                       display
